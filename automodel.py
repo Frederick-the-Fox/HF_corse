@@ -24,7 +24,9 @@ checkpoint = "distilbert-base-uncased-finetuned-sst-2-english"
 model = AutoModelForSequenceClassification.from_pretrained(checkpoint)
 outputs = model(**inputs)
 
-print('origin output:{}; logits: {}'.format(outputs, outputs.logits))
+# print('origin output:{}; logits: {}'.format(outputs, outputs.logits))
+
+# print(outputs.last_hidden_state.shape)
 
 import torch
 
